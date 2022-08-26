@@ -3,7 +3,7 @@ import React from 'react';
 import {View, Text, TouchableOpacity} from 'react-native';
 
 import Icon from 'react-native-vector-icons/AntDesign';
-import styles from './supportCenter.styles';
+import styles from './SupportCenter.styles';
 
 const SupportCenter = () => {
   return (
