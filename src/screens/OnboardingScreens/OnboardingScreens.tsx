@@ -1,14 +1,38 @@
 import React from 'react';
-import {View, Image} from 'react-native';
+import {View, ImageBackground} from 'react-native';
+import Onboard from '../../components/Onboard';
 import styles from './OnboardingScreens.styles';
 
 const imageOne = '../../assets/images/onboarding-1.png';
-const OnboardingScreens = () => {
+const imageTwo = '../../assets/images/onboarding-2.png';
+const imageThree = '../../assets/images/onboarding-3.png';
+
+const ScreenOne = () => {
   return (
     <View>
-      <Image source={require(imageOne)} style={styles.screenOne} />
+      <ImageBackground source={require(imageOne)} style={styles.screenImage} />
+      <Onboard textWriteUp="Protect yourself with Chekkit App by verifying the safety of the products before you use them" />
     </View>
   );
 };
 
-export default OnboardingScreens;
+const ScreenTwo = () => {
+  return (
+    <View>
+      <ImageBackground source={require(imageTwo)} style={styles.screenImage} />
+    </View>
+  );
+};
+
+const ScreenThree = () => {
+  return (
+    <View>
+      <ImageBackground
+        source={require(imageThree)}
+        style={styles.screenImage}
+      />
+    </View>
+  );
+};
+
+export {ScreenOne, ScreenTwo, ScreenThree};

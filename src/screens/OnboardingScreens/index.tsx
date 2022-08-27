@@ -1,3 +1,3 @@
-import OnboardingScreens from './OnboardingScreens';
+import {ScreenOne, ScreenTwo, ScreenThree} from './OnboardingScreens';
 
-export default OnboardingScreens;
+export {ScreenOne, ScreenTwo, ScreenThree};
