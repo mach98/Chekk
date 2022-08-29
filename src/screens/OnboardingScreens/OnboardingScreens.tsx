@@ -20,6 +20,7 @@ const ScreenTwo = () => {
   return (
     <View>
       <ImageBackground source={require(imageTwo)} style={styles.screenImage} />
+      <Onboard textWriteUp="Scan Products &amp; Win Amazing Rewards" />
     </View>
   );
 };
@@ -31,6 +32,7 @@ const ScreenThree = () => {
         source={require(imageThree)}
         style={styles.screenImage}
       />
+      <Onboard textWriteUp="Protect yourself with Chekkit App by verifying the safety of the products before you use them" />
     </View>
   );
 };
