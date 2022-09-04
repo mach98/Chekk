@@ -1,11 +1,15 @@
 import React from 'react';
-
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import {AuthenticationNavigatorParams} from '../../navigation/AuthenticationNavigator';
 import {View, Text, TouchableOpacity} from 'react-native';
 import {TextInput} from 'react-native-paper';
 
 import styles from './LoginScreen.styles';
 
 const LoginScreen = () => {
+  const navigation =
+    useNavigation<NativeStackNavigationProp<AuthenticationNavigatorParams>>();
   return (
     <View style={styles.container}>
       <Text style={styles.screenHeader}>Welcome Back</Text>
@@ -26,7 +30,12 @@ const LoginScreen = () => {
 
         <View style={styles.rememberMe}>
           <Text style={styles.rememberMeText}>Remember me next time</Text>
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate('AuthenticatorNavigator', {
+                screen: 'ForgotPassword',
+              });
+            }}>
             <Text style={styles.troubleLogin}>Trouble logging in?</Text>
           </TouchableOpacity>
         </View>
