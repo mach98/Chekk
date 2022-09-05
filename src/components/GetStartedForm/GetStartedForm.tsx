@@ -1,4 +1,7 @@
 import React, {useState, FC} from 'react';
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import {AuthenticationNavigatorParams} from '../../navigation/AuthenticationNavigator';
 import {View, Text, TouchableOpacity} from 'react-native';
 import IGetStartedForm from './GetStartedForm.interface';
 
@@ -8,6 +11,8 @@ import DropDownPicker from 'react-native-dropdown-picker';
 import styles from './GetStartedForm.styles';
 
 const GetStartedForm: FC<IGetStartedForm> = () => {
+  const navigation =
+    useNavigation<NativeStackNavigationProp<AuthenticationNavigatorParams>>();
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState(null);
   const [items, setItems] = useState([
@@ -94,7 +99,12 @@ const GetStartedForm: FC<IGetStartedForm> = () => {
         </TouchableOpacity>
         <View style={styles.loginLink}>
           <Text>Already have an account?</Text>
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate('AuthenticatorNavigator', {
+                screen: 'Login',
+              });
+            }}>
             <Text style={styles.loginLinkText}> Log In</Text>
           </TouchableOpacity>
         </View>

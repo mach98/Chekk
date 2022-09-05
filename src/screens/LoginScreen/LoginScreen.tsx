@@ -46,7 +46,12 @@ const LoginScreen = () => {
 
         <View style={styles.redirectToRegister}>
           <Text>New here?</Text>
-          <TouchableOpacity>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate('AuthenticatorNavigator', {
+                screen: 'GetStarted',
+              });
+            }}>
             <Text style={styles.signUp}> Sign Up</Text>
           </TouchableOpacity>
         </View>
