@@ -14,6 +14,10 @@ const styles = StyleSheet.create({
     fontSize: 20,
     color: TextColor,
   },
+  headerStyle: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
 });
 
 export default styles;

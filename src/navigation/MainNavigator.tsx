@@ -18,39 +18,46 @@ const MainNavigator = () => {
         name="Home"
         component={MainScreen}
         options={{
-          tabBarIcon: ({focused}) => (
-            <Icon name="home" size={25} color={focused ? 'black' : 'grey'} />
+          tabBarIcon: ({focused, color}) => (
+            <Icon name="home" size={25} color={color} />
           ),
+          tabBarActiveTintColor: 'black',
+          tabBarInactiveTintColor: 'grey',
         }}
       />
       <Tab.Screen
         name="Redeem Points"
         component={RedeemPointsScreen}
         options={{
-          tabBarIcon: ({focused}) => (
-            <Icon2 name="ticket" size={25} color={focused ? 'black' : 'grey'} />
+          tabBarIcon: ({color}) => (
+            <Icon2 name="ticket" size={25} color={color} />
           ),
+          tabBarActiveTintColor: 'black',
+          tabBarInactiveTintColor: 'grey',
         }}
       />
       <Tab.Screen
         name="Report Product"
         component={ReportProductScreen}
         options={{
-          tabBarIcon: ({focused}) => (
-            <Icon3
-              name="profile"
-              size={25}
-              color={focused ? 'black' : 'grey'}
-            />
+          tabBarIcon: ({color}) => (
+            <Icon3 name="profile" size={25} color={color} />
           ),
+          tabBarActiveTintColor: 'black',
+          tabBarInactiveTintColor: 'grey',
         }}
       />
-      <Tab.Screen name="Activities" component={ActivitiesScreen} 
-       options={{
-        tabBarIcon: ({focused}) => (
-          <Icon2 name="clock-time-four-outline" size={25} color={focused ? 'black' : 'grey'} />
-        ),
-      }}/>
+      <Tab.Screen
+        name="Activities"
+        component={ActivitiesScreen}
+        options={{
+          tabBarIcon: ({color}) => (
+            <Icon2 name="clock-time-four-outline" size={25} color={color} />
+          ),
+          tabBarActiveTintColor: 'black',
+          tabBarInactiveTintColor: 'grey',
+        }}
+      />
     </Tab.Navigator>
   );
 };

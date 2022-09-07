@@ -8,8 +8,8 @@ const MainScreen = () => {
   return (
     <View style={styles.container}>
       <View style={styles.profileBar}>
-        <Text style={styles.profileText}>Hi, Abraham(Baldy)</Text>
-        <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+        <Text style={styles.profileText}>Hi, Chidera</Text>
+        <View style={styles.headerStyle}>
           <Icon name="notifications-outline" size={30} />
           <ProfileAvatar />
         </View>
