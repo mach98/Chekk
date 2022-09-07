@@ -1,13 +1,12 @@
-import React, {FC} from 'react';
-import {View, Text, Image} from 'react-native';
+import React from 'react';
+import {View, Text} from 'react-native';
 import styles from './Profile.styles';
+import ProfileAvatar from '../ProfileAvatar/ProfileAvatar';
 
-const avatarURL = '../../assets/images/profile.jpg';
-
-const Profile: FC = () => {
+const Profile = () => {
   return (
     <View style={styles.profile}>
-      <Image source={require(avatarURL)} style={styles.avatar} />
+      <ProfileAvatar />
       <View style={{margin: 5}}>
         <Text>Saleem Alex</Text>
         <Text>saleemalex@gmail.com</Text>

@@ -3,6 +3,7 @@ import React from 'react';
 
 import AuthenticationNavigator from './AuthenticationNavigator';
 import OnboardStackNavigator from './OnboardStackNavigator';
+import MainNavigator from './MainNavigator';
 
 const Stack = createNativeStackNavigator();
 
@@ -17,6 +18,11 @@ const HomeNavigator = () => {
       <Stack.Screen
         name="AuthenticatorNavigator"
         component={AuthenticationNavigator}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="MainNavigator"
+        component={MainNavigator}
         options={{headerShown: false}}
       />
     </Stack.Navigator>
