@@ -26,7 +26,12 @@ const MainScreen = () => {
         <TouchableOpacity style={styles.redeemButton}>
           <Text style={styles.redeemButtonText}>Redeem Points</Text>
         </TouchableOpacity>
-        <View></View>
+        <View style={styles.surveySection}>
+          <Text style={styles.surveyText}>Take surveys and win points</Text>
+          <TouchableOpacity>
+            <Text style={styles.surveryTextLink}>View All</Text>
+          </TouchableOpacity>
+        </View>
       </View>
     </View>
   );

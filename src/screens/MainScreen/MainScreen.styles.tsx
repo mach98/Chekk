@@ -72,6 +72,20 @@ const styles = StyleSheet.create({
     color: TextColor,
     fontSize: 13,
   },
+  surveySection: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginTop: -40,
+  },
+  surveyText: {
+    fontWeight: '500',
+    color: 'black',
+    fontSize: 15,
+  },
+  surveryTextLink: {
+    color: TextColor,
+    textDecorationLine: 'underline',
+  },
 });
 
 export default styles;
