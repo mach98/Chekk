@@ -26,7 +26,10 @@ const ProductView: FC<IProductView> = ({
             <Text style={styles.estimatedTimeText}>3 mins</Text>
           </View>
         </View>
-        <Image source={require(TEST_IMAGE)} style={styles.productImage} />
+        <View style={styles.productImage}>
+          <Image source={require(TEST_IMAGE)} />
+        </View>
+
         <View style={styles.progressSection}>
           <Text style={styles.productName}>Nivea</Text>
           <Text style={styles.progressText}>1/4</Text>

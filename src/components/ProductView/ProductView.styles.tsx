@@ -26,6 +26,7 @@ const styles = StyleSheet.create({
   estimatedTimeText: {
     color: TextColor,
     fontSize: 14,
+    fontWeight: '500',
   },
   estimatedTimeIcon: {
     fontSize: 15,
@@ -35,11 +36,12 @@ const styles = StyleSheet.create({
   productImage: {
     alignItems: 'center',
     justifyContent: 'center',
+    marginTop: 20,
   },
   progressSection: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginBottom: 9,
+    marginBottom: 50,
     paddingRight: 10,
     paddingLeft: 5,
   },
